@@ -1,0 +1,35 @@
+body{
+    padding: 30px;
+}
+.sometext{
+    font-family: serif;
+    font-style: italic;
+    font-size: 50px;
+
+}
+.block{
+    height: 800px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+    /* background-color: rgba(129, 45, 211, 1); */
+    /* background: url('../img/1.jpeg'); */
+    /* background: url('../img/floral-pattern-1603073_1280.png'); */
+
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+    background: rgb(179,220,237); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgb(179,220,237) 0%, rgb(41,184,229) 50%, rgb(188,224,238) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgb(179,220,237) 0%,rgb(41,184,229) 50%,rgb(188,224,238) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgb(179,220,237) 0%,rgb(41,184,229) 50%,rgb(188,224,238) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 ); /* IE6-9 */
+
+}
+.block-2{
+
+    height: 800px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+    background: url('../img/floral-pattern-1603073_1280.png') 0 0 no-repeat, url('../img/1.jpeg') 50%/cover no-repeat;
+
+
+}

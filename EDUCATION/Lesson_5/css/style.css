@@ -1,0 +1,32 @@
+/* body{ */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.text { }
+.thicktext { }
+.redtext {
+    color: red;
+}
+.textright {
+    text-align: right;
+}
+.textup {
+    text-transform: uppercase;
+}
+.textitalic {
+    font-style: italic;
+}
+.textunderline {
+    text-decoration: underline;
+}
+.textcenter {
+    text-align: center;
+}
+.bigtext {
+    font-size: 30px;
+}
+.textline {
+    text-decoration: line-through;
+}
+.textshadow {
+    text-shadow: 1px 1px 1px #000;
+}

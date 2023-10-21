@@ -1,0 +1,45 @@
+@import "nullstyle.scss";
+
+
+// Переменные
+    $fz: 100px;
+    $color: yellowgreen;
+
+// Шаблон №1
+%link-border{
+    padding: 10px;
+    margin-left: 40px;
+    border: 10px ridge #14eff7;
+    font-size: 45px;
+    color: rgb(188, 57, 240);
+}
+
+.linka{
+    margin-top: 50px;
+}
+
+.block{
+    margin: 40px;
+    width: 300px/960px*100%; //файл
+    font-size: $fz;
+    line-height: 100px;
+    background-color: #666;
+    span{
+        color: $color;
+    }
+}
+
+.link-1, .link-2{
+    @extend %link-border;
+}
+
+
+
+
+
+
+
+// Миксины
+
+
+// Переменные

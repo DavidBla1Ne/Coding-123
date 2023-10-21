@@ -1,0 +1,103 @@
+.content {
+  margin: 0 0 0 50px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.content__circle {
+  border: #07ffe6 10px solid;
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.content__square {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 35px;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: #e71515;
+  -webkit-transition: all 1s linear 0.1s;
+  transition: all 1s linear 0.1s;
+}
+.content__square:active {
+  -webkit-transform: skew(10deg, 0deg);
+          transform: skew(10deg, 0deg);
+  background-color: #76f925;
+  -webkit-transition: all 1s linear 0.1s;
+  transition: all 1s linear 0.1s;
+}
+
+@-webkit-keyframes black-circle {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+@keyframes black-circle {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 500px;
+  }
+}
+.button {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 60px;
+  padding: 0 30px;
+  margin: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  border-radius: 10px;
+  top: 0;
+  position: relative;
+}
+
+.button {
+  color: #fff;
+  background-color: #5e5373;
+  -webkit-box-shadow: 0px 5px 0px #3c354a;
+          box-shadow: 0px 5px 0px #3c354a;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-delay: 0, 0.5s;
+          transition-delay: 0, 0.5s;
+}
+
+.button:hover {
+  top: 2px;
+  -webkit-box-shadow: 0px 3px 0px #3c354a;
+          box-shadow: 0px 3px 0px #3c354a;
+  background-color: #18b5a4;
+}
