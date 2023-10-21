@@ -140,3 +140,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.phone {
+  font-size: 50px;
+  color: #d42929;
+}
