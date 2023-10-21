@@ -91,6 +91,8 @@ body {
 .news-info {
     display: inline-block;
     // align-items: center;
+    justify-content: space-between;
+    // align-items: center;
 }
 .news-text p{
     max-width: 560px;
