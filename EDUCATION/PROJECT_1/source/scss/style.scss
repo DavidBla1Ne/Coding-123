@@ -55,7 +55,7 @@ button::-moz-focus-inner {
 }
 a, a:visited {
   text-decoration: none;
-  color:inherit;
+  color: inherit;
 }
 a:hover {
   text-decoration: none;
@@ -77,7 +77,7 @@ body {
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-    color:#0a0a0a;
+    color: #0a0a0a;
 }
 // HEADER
 .header {
@@ -126,7 +126,7 @@ body {
     font-size: 24px;
     line-height: 29px;
     text-transform: uppercase;
-    color: #fff;
+    color: #fff !important;
     background-color: #490e84;
     padding: 22px 117px 19px;
     border-radius: 30px;
@@ -183,10 +183,23 @@ body {
     font-weight: 700;
 }
 .form {
+    margin-top: 150px;
+}
+.form-blocks{
+    display: flex;
+    background-color: #574B63;
+    
 }
 .form-order {
+    margin-top: 150px;
+    width: 600px;
+    // height: 600px;  
 }
 .form-title {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
 }
 .form-username {
 }

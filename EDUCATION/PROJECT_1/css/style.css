@@ -152,7 +152,7 @@ body {
   font-size: 24px;
   line-height: 29px;
   text-transform: uppercase;
-  color: #fff;
+  color: #fff !important;
   background-color: #490e84;
   padding: 22px 117px 19px;
   border-radius: 30px;
@@ -212,6 +212,29 @@ body {
 .color-label h3 {
   font-size: 20px;
   font-weight: 700;
+}
+
+.form {
+  margin-top: 150px;
+}
+
+.form-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #574B63;
+}
+
+.form-order {
+  margin-top: 150px;
+  width: 600px;
+}
+
+.form-title {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .footer {
