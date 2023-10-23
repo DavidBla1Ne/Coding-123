@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter-Regular.woff2") format("woff2");
@@ -10,17 +11,82 @@
   font-style: normal;
   font-weight: 700;
 }
-a {
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
   text-decoration: none;
   color: inherit;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
   list-style: none;
 }
 
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -64,19 +130,20 @@ body {
   padding-right: 30px;
 }
 
-.logo {
-  margin-right: 100px;
-}
-
 .headline {
   background-color: #f4f5f7;
   text-align: center;
-  padding: 70px 0px 4px;
+  padding: 71px 0 0 0;
 }
 
 .headline-text {
   color: #490E84;
   font-size: 64px;
+  font-weight: 700;
+}
+
+.headline-img {
+  margin-top: 40px;
 }
 
 .headline-btn {
@@ -96,15 +163,14 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 32px;
+  font-weight: 700;
   color: #717171;
   margin-top: 87px;
 }
 
 .news-info {
   display: inline-block;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-top: 37px;
 }
 
 .news-text p {
@@ -117,6 +183,35 @@ body {
   font-size: 20px;
   line-height: 26px;
   display: block;
+}
+
+.news-img {
+  margin: 87px 0 0 191px;
+}
+
+.color-title {
+  color: #717171;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.color-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.color-label h3 {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .footer {
@@ -141,7 +236,6 @@ body {
           justify-content: space-between;
 }
 
-.phone {
-  font-size: 50px;
-  color: #d42929;
+.footer-link {
+  font-size: 14px;
 }
