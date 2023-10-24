@@ -237,6 +237,35 @@ body {
   text-align: center;
 }
 
+.form-username {
+  margin-top: 72px;
+  background: #F5F5F5;
+}
+
+.form-usertel {
+  margin-top: 30px;
+  background: #F5F5F5;
+}
+
+.form-subtitle {
+  margin-top: 30px;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+}
+
+.form-btn {
+  margin-top: 30px 0 175px;
+  display: inline-block;
+  padding: 16px 81px 16px 81px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 30px;
+  background: #FFF;
+  width: 240px;
+  height: 50px;
+}
+
 .footer {
   color: #717171;
   background-color: #0A0A0A;
