@@ -142,7 +142,7 @@
 
 
 
-// Global Variables
+// G L O B A L   V A R I A B L E S
 :root{
   --color-light: #FFFFFF;
   --color-dark-grey: #404040;
@@ -166,9 +166,10 @@
 
 body{
   font-family: var(--font-family-base);
-  color: var(--color-light-grey);
+  font-weight: 300;
   font-size: 16px;
   line-height: 1.75;
+  color: var(--color-light-grey);
   background-color: var(--color-dark-light);
 }
 
@@ -183,9 +184,43 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--color-light);
+}
+
+a:hover {
+  color: var(--color-light-grey);
+}
+
+// H E A D E R
+
+.button{
+  display: inline-flex;
+  align-items: center;
+  height: 38px;
+  padding-inline: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background-color: var(--color-light);
+  border: none;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: var(--color-light-grey);
 }
 
 .header {
@@ -197,75 +232,107 @@ a {
 }
 
 .header-logo {
+  flex-shrink: 0;
 }
 
-.header-logo-image{
-  min-width: 135px;
-}
-
-.header-menu {
-}
-.menu-list {
+.header-menu-list {
   display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+}
+
+.header-menu-link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 7px;
+  height: 90px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
-.menu-item {
-  padding-left: 62px;
-}
-.selected::after {
+.header-menu-link.is-current::after {
   content: "";
   width: 5px;
   height: 5px;
   // aspect-ratio: 1;
   border-radius: 50%;
-  color: var(--color-light);
+  background-color: currentColor;
 
 
 }
-.header-buttons {
+.header-action {
   display: flex;
   align-items: center;
+  column-gap: 40px;
 }
-.header-button {
-  width: 124px;
-  height: 38px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 2;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 30px;
-}
+
 .header-burger-button {
   display: flex;
   align-items: center;
-  padding-left: 40px;
 }
 
+.burger-icon:hover {
+    fill: var(--color-light-grey);
+}
 
+@media (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    row-gap: 10px;
+    padding-inline: 15px;
+  }
+  .header-menu {
+    order: 1;
+    flex-basis: 100%;
+  }
+  .header-menu-link {
+    height: 50px;
+  }
+  .header-menu-list{
+    justify-content: center;
+  }
+}
 
-// Header
+@media (max-width: 767px) {
+  .button {
+    height: 30px;
+    padding-inline: 20px;
+  }
 
-// Section Crossfit
+  .header{
+    padding-top: 10px;
+  }
+  .header-menu-link {
+    height: 32px;
+  }
+  .header-menu-list{
+    justify-content: center;
+    column-gap: 24px;
+  }
+  .header-action {
+    column-gap: 10px;
+  }
+}
 
-// Section Strong
+// S E C T I O N   C R O S S F I T
 
-// Section Start
+// S E C T I O N   S T R O N G
 
-// Section Pick
+// S E C T I O N   S T A R T
 
-// Section BackImage
+// S E C T I O N   P I C K
 
-// Section JoinUs
+// S E C T I O N   B A C K I M A G E
 
-// Section Look + Map
+// S E C T I O N   J O I N U S
 
-// Section Part
+// S E C T I O N   L O O K M A P
 
-// Section Form
+// S E C T I O N   P A R T
 
-// Footer
+// S E C T I O N   F O R M
+
+// F O O T E R
