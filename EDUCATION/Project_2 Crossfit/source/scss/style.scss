@@ -148,7 +148,7 @@
   --color-dark-grey: #404040;
   --color-light-grey: #C4C4C4;
   --color-dark: #000000;
-  --color-dark-light: #131619;
+  --color-dark-alternate: #131619;
 
   --border-radius: 30px;
   --border: 1px solid var(--color-light);
@@ -170,13 +170,26 @@ body{
   font-size: 16px;
   line-height: 1.75;
   color: var(--color-light-grey);
-  background-color: var(--color-dark-light);
+  background-color: var(--color-dark);
 }
 
 .container{
   max-width: calc(var(--container-width) + var(--container-padding-x)*2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -229,6 +242,7 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding-inline: 32px;
+  background-color: var(--color-dark-alternate);
 }
 
 .header-logo {
@@ -255,8 +269,7 @@ a:hover {
 .header-menu-link.is-current::after {
   content: "";
   width: 5px;
-  height: 5px;
-  // aspect-ratio: 1;
+  aspect-ratio: 1;
   border-radius: 50%;
   background-color: currentColor;
 
@@ -318,6 +331,74 @@ a:hover {
 }
 
 // S E C T I O N   C R O S S F I T
+
+.content {
+}
+.visually-hidden {
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-height: 985px;
+  padding: 36px 70px;
+  color: var(--color-light);
+  background-color: var(--color-dark-alternate);
+}
+
+.banner-body {
+  text-transform: uppercase;
+}
+
+.banner-info {
+  display: flex;
+  align-items: end;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1,27;
+}
+
+.banner-info::before {
+  content: '';
+  width: 194px;
+  aspect-ratio: 1;
+  background: url('../icons/bold-arrow-down-right.svg') center/contain no-repeat;
+  margin-right: 30px;
+}
+
+.banner-title {
+  font-size: 360px;
+  line-height: 1;
+}
+.banner-pagination {
+}
+.banner-pagination-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 14px;
+}
+.banner-pagination-iten {
+  display: flex;
+}
+.banner-pagination-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 7px;
+  background-color: transparent;
+}
+
+.banner-pagination-button::after {
+  content: '';
+  width: 10px;
+  aspect-ratio: 1;
+  border: var(--border);
+  border-radius: 50%;
+}
+.banner-pagination-button.is-current::after {
+  background-color: var(--color-light);
+}
 
 // S E C T I O N   S T R O N G
 
