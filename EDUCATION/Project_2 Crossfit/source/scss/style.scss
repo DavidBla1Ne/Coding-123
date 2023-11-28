@@ -162,6 +162,8 @@
   --container-padding-x: 15px;
 
   --transition-duration: 0.2s;
+
+  --header-hight: 90px;
 }
 
 body{
@@ -237,7 +239,7 @@ a:hover {
 }
 
 .header {
-  height: 90px;
+  min-height: var(--header-hight);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -259,7 +261,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   column-gap: 7px;
-  height: 90px;
+  height: var(--header-hight);
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
@@ -290,57 +292,15 @@ a:hover {
     fill: var(--color-light-grey);
 }
 
-@media (max-width: 1024px) {
-  .header {
-    flex-wrap: wrap;
-    padding-top: 20px;
-    row-gap: 10px;
-    padding-inline: 15px;
-  }
-  .header-menu {
-    order: 1;
-    flex-basis: 100%;
-  }
-  .header-menu-link {
-    height: 50px;
-  }
-  .header-menu-list{
-    justify-content: center;
-  }
-}
 
-@media (max-width: 767px) {
-  .button {
-    height: 30px;
-    padding-inline: 20px;
-  }
-
-  .header{
-    padding-top: 10px;
-  }
-  .header-menu-link {
-    height: 32px;
-  }
-  .header-menu-list{
-    justify-content: center;
-    column-gap: 24px;
-  }
-  .header-action {
-    column-gap: 10px;
-  }
-}
 
 // S E C T I O N   C R O S S F I T
 
-.content {
-}
-.visually-hidden {
-}
 .banner {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  min-height: 985px;
+  min-height: calc(100vh - var(--header-hight));
   padding: 36px 70px;
   color: var(--color-light);
   background-color: var(--color-dark-alternate);
@@ -353,33 +313,33 @@ a:hover {
 .banner-info {
   display: flex;
   align-items: end;
-  font-size: 30px;
+  font-size: clamp(16px, 1.56vw, 30px);
   font-weight: 700;
   line-height: 1,27;
 }
 
 .banner-info::before {
   content: '';
-  width: 194px;
+  width: clamp(60px, 10.1vw, 194px);
   aspect-ratio: 1;
   background: url('../icons/bold-arrow-down-right.svg') center/contain no-repeat;
   margin-right: 30px;
 }
 
 .banner-title {
-  font-size: 360px;
+  font-size: min(18.75vw, 360px);
   line-height: 1;
 }
-.banner-pagination {
-}
+
 .banner-pagination-list {
   display: flex;
   justify-content: center;
-  column-gap: 14px;
 }
+
 .banner-pagination-iten {
   display: flex;
 }
+
 .banner-pagination-button {
   display: inline-flex;
   justify-content: center;
@@ -395,12 +355,78 @@ a:hover {
   aspect-ratio: 1;
   border: var(--border);
   border-radius: 50%;
+  transition-duration: var(--transition-duration);
 }
+
 .banner-pagination-button.is-current::after {
   background-color: var(--color-light);
 }
 
+.banner-pagination-button:not(.is-current):hover::after {
+  border-color: var(--color-light-grey);
+}
+
+
+
+
 // S E C T I O N   S T R O N G
+
+.motivation {
+}
+.visually-hidden {
+}
+.motivation-list {
+
+
+}
+.motivation-item {
+
+}
+
+.motivation-item:nth-child(even) {
+  background-color: var(--color-dark-alternate);
+}
+
+.motivation-item:nth-child(even) .motivation-card {
+  flex-direction: row-reverse;
+}
+
+.motivation-card {
+  display: flex;
+  // justify-content: start;
+  color: var(--color-light);
+
+}
+
+.motivation-card-body {
+  padding-left: 35px;
+}
+.motivation-card-title {
+  font-size: 40px;
+  line-height: 1.3;
+}
+.backdrop-title {
+}
+.motivation-card-description {
+  color: var(--color-light-grey);
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: 0.8px;
+  // max-width: 387px;
+}
+.motivation-card-button {
+}
+.button {
+}
+.transparent {
+}
+.motivation-card-image {
+  margin-block: -62px;
+}
+
+.motivation-card-image:nth-child(even) {
+  margin: -71px 0;
+}
 
 // S E C T I O N   S T A R T
 
@@ -417,3 +443,68 @@ a:hover {
 // S E C T I O N   F O R M
 
 // F O O T E R
+
+
+
+
+// A D A P T I V E
+
+@media (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    row-gap: 10px;
+  }
+
+  .header,
+  .banner {
+    padding-inline: 10px;
+  }
+
+  .header-menu {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  .header-menu-link {
+    height: 50px;
+  }
+
+  .header-menu-list {
+    justify-content: center;
+  }
+
+  .banner {
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    height: 30px;
+    padding-inline: 20px;
+  }
+
+  .header{
+    padding-top: 10px;
+  }
+
+  .header-menu-link {
+    height: 32px;
+  }
+
+  .header-menu-list{
+    justify-content: center;
+    column-gap: 24px;
+  }
+
+  .header-action {
+    column-gap: 10px;
+  }
+  .banner-info::before{
+    margin-right: 10px;
+  }
+  .banner-info{
+    padding-bottom: 5px;
+  }
+}
