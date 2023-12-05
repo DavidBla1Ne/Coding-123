@@ -273,7 +273,7 @@ p {
 
 .backdrop-title {
   position: relative;
-  z-index: 2 ;
+  z-index: 2;
 }
 
 .backdrop-title::before {
@@ -295,8 +295,8 @@ p {
   font-family: var(--font-family-accent);
   font-size: 2.8em;
   color: transparent;
-  -webkit-text-stroke: 1px var(--color-light-grey);
-  text-stroke: 1px var(--color-light-grey);
+  -webkit-text-stroke: 1px var(--color-dark-grey);
+  text-stroke: 1px var(--color-dark-grey);
 }
 
 // H E A D E R
@@ -510,25 +510,47 @@ p {
 .training-types-items-title {
   font-size: 16px;
   line-height: 1.75;
-  
+
 }
 
 // S E C T I O N   J O I N   U S
 
-.join-us {
-}
-
 .join-us-video-wrapper {
-  height: 900px;
-  background: url(../images/join/join-Bg.jpg) 0 0/cover no-repeat;
-}
-
-.join-us-video {
-   
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/join/join-Bg.jpg) center/cover no-repeat var(--color-dark-alternate);
+  padding: 150px 30px;
 }
 
 .join-us-video-play-button {
+  position: absolute;
+  width: 200px;
+  aspect-ratio: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 50%;
+  font-size: 14px;
+  color: var(--color-light);
+  font-weight: 700;
+  column-gap: 4px;
 }
+
+.join-us-video-play-button::after {
+  content: '';
+  height: 26px;
+  aspect-ratio: 1;
+  background: url('../icons/arrow-top-right.svg') center/contain no-repeat;
+}
+
+.join-us-video-play-button:hover {
+  
+}
+
 
 .join-us-body {
   height: 600px;
@@ -542,6 +564,7 @@ p {
   font-size: 180px;
   line-height: 1.2;
   white-space: nowrap;
+  // margin-top: -40px;
 }
 
 .join-us-title::after {
@@ -556,37 +579,41 @@ p {
 .join-us-form-header {
 }
 .join-us-form-header-title {
-  // display: flex;
-  text-align: center;
   font-size: 60px;
-  font-weight: 700;
   line-height: 1.2;
-  text-transform: uppercase;
-  z-index: 20;
 }
 
-// .join-us-form-header-title::before {
-//   content: '';
-//   display: block;
-//   position: absolute;
-//   // right: calc(100% + 80px);
-//   width: 26px;
-//   height: 40px;
-//   background: url('../icons/Plus_icon.svg') center/contain no-repeat;
-// }
+.backdrop-title-join {
+  position: relative;
+  z-index: 2 ;
+  max-width: 350px;
+  margin: 0 auto;
+  white-space: nowrap;
+}
 
-// .join-us-form-header-title::after {
-//   content: attr(data-title);
-//   position: absolute;
-//   z-index: 0;
-//   top: 25.94em;
-//   left: 4.80em;
-//   font-family: var(--font-family-accent);
-//   font-size: 2.8em;
-//   color: transparent;
-//   -webkit-text-stroke: 1px var(--color-light-grey);
-//   text-stroke: 1px var(--color-light-grey);
-// }
+.backdrop-title-join::before {
+  content: '';
+  display: block;
+  position: absolute;
+  right: calc(100% + 7px);
+  width: 26px;
+  height: 40px;
+  background: url('../icons/Plus_icon.svg') center/contain no-repeat;
+}
+
+.backdrop-title-join::after {
+  content: attr(data-title);
+  position: absolute;
+  z-index: -1;
+  top: -0.33em;
+  left: 0.06em;
+  font-family: var(--font-family-accent);
+  font-size: 3em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-dark-grey);
+  text-stroke: 1px var(--color-dark-grey);
+}
 
 .join-us-form-header-text {
   color: var(--color-light);
@@ -595,6 +622,8 @@ p {
   font-weight: 300;
   line-height: 1.65;
   text-transform: uppercase;
+  padding-bottom: 52px;
+  padding-top: 30px;
 }
 .join-us-form-body {
   display: flex;
@@ -602,15 +631,18 @@ p {
   justify-content: center;
   gap: 20px;
 }
-.join-us-form-input {
+
+.input {
   width: 400px;
   color: #C4C4C4;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.8px;
   text-transform: none;
-  padding: 15px 25px !important;
-  border: 1px solid #404040 !important;
+  background-color: transparent;
+  padding: 15px 25px;
+  border: 1px solid #404040;
+  border-radius: var(--border-radius);
 }
 
 
@@ -648,7 +680,7 @@ p {
 
 @media (max-width: 1280px) {
   .training-types-list {
-    grid-template-columns: repeat(3, 1fr);  
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -740,7 +772,7 @@ p {
   }
 
   .training-types-list {
-    grid-template-columns: repeat(2, 1fr);  
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
 

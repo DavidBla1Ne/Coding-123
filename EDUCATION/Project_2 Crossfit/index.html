@@ -217,47 +217,49 @@
       <h2 class="visually-hidden">Join us</h2>
       <div class="join-us-video-wrapper">
         <video
-          class="join-us-video" 
+          class="join-us-video"
           src=""
           width="960"
           height="600"
           poster="./images/join/join-video.jpg"
           >
         </video>
-        <button 
+        <button
           class="join-us-video-play-button"
           type="button"
         >
-        play
+        PLAY
         </button>
       </div>
       <div class="join-us-body">
         <h2 class="join-us-title">join us</h2>
         <form class="join-us-form">
           <header class="join-us-form-header">
-            <h3 class="join-us-form-header-title" data-title="go!">
+            <h3 class="join-us-form-header-title backdrop-title-join" data-title="go!">
               start here
             </h3>
             <div class="join-us-form-header-text">
-              <p>
-                fill the form below to start your journey
-              </p>
+              fill the form below to start your journey
             </div>
           </header>
           <div class="join-us-form-body ">
-            <input 
-              class="join-us-form-input button transparent"
-              type="text" 
+            <label class="visually-hidden" for="username">Name</label>
+            <input
+              class="join-us-form-input input"
+              id="username"
+              type="text"
               placeholder="Name"
             >
+            <label class="visually-hidden" for="email">Email</label>
             <input
-              class="join-us-form-input button transparent"
-              type="email" 
+              class="join-us-form-input input"
+              id="email"
+              type="email"
               placeholder="Email"
             >
             <button
               class="join-us-form-input-button button transparent"
-              type="button"
+              type="submit"
             >
               Subscribe
             </button>
