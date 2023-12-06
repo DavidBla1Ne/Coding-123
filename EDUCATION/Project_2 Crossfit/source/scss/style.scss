@@ -520,7 +520,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../images/join/join-Bg.jpg) center/cover no-repeat var(--color-dark-alternate);
+  background: url('../images/join/join-Bg.jpg') center/cover no-repeat var(--color-dark-alternate);
   padding: 150px 30px;
 }
 
@@ -545,26 +545,34 @@ p {
   height: 26px;
   aspect-ratio: 1;
   background: url('../icons/arrow-top-right.svg') center/contain no-repeat;
+  transition-duration: var(--transition-duration);
 }
 
 .join-us-video-play-button:hover {
-  
+  background-color: var(--color-light-grey);
+  color: var(--color-dark);
 }
 
+.join-us-video-play-button:hover::after {
+  filter: invert(1);
+}
 
 .join-us-body {
   height: 600px;
   background-color: var(--color-dark-alternate);
+  padding-bottom: 150px;
 }
 
 .join-us-title {
   display: flex;
   justify-content: center;
   gap: 25px;
-  font-size: 180px;
-  line-height: 1.2;
+  font-size: clamp(64px, 9.38vw, 180px);
+  line-height: 1;
   white-space: nowrap;
-  // margin-top: -40px;
+  margin-top: -0.4em;
+  position: relative;
+  margin-bottom: 0.75em;
 }
 
 .join-us-title::after {
@@ -593,7 +601,7 @@ p {
 
 .backdrop-title-join::before {
   content: '';
-  display: block;
+  // display: block;
   position: absolute;
   right: calc(100% + 7px);
   width: 26px;
@@ -633,7 +641,8 @@ p {
 }
 
 .input {
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   color: #C4C4C4;
   font-size: 16px;
   font-weight: 300;
