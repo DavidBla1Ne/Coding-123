@@ -413,7 +413,7 @@ p {
 }
 
 .banner-title {
-  font-size: min(18.75vw, 360px);
+  font-size: min(18vw, 360px);
   line-height: 1;
 }
 
@@ -568,6 +568,12 @@ p {
   padding: 150px 30px;
 }
 
+.join-us-video {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+
 .join-us-video-play-button {
   position: absolute;
   width: 200px;
@@ -641,7 +647,7 @@ p {
 }
 
 .join-us-form-header-title {
-  font-size: 60px;
+  font-size: clamp(20px, 3.12vw, 60px);
   line-height: 1.2;
 }
 
@@ -651,6 +657,10 @@ p {
   max-width: 350px;
   margin: 0 auto;
   white-space: nowrap;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .backdrop-title-join::before {
@@ -701,17 +711,28 @@ p {
 }
 
 .input {
-  max-width: 400px;
   width: 100%;
-  color: #C4C4C4;
+  color: var(--color-light-grey);
   font-size: 16px;
-  font-weight: 300;
   letter-spacing: 0.8px;
-  text-transform: none;
   background-color: transparent;
   padding: 15px 25px;
   border: 1px solid #404040;
   border-radius: var(--border-radius);
+}
+
+.input:hover {
+  border-color: var(--color-light);
+}
+
+.input:focus {
+  outline: none;
+  color: var(--color-dark);
+  background-color: var(--color-light-grey);
+}
+
+.join-us-form-input {
+  max-width: 400px;
 }
 
 @media (max-width: 1919px) {
@@ -761,6 +782,9 @@ p {
     max-width: 30%;
     height: auto;
     margin-block: 0;
+  }
+  .join-us-body {
+    padding-bottom: 80px;
   }
 }
 @media (max-width: 767px) {
@@ -819,5 +843,20 @@ p {
   }
   .training-types-images {
     max-width: 120px;
+  }
+  .join-us-video-play-button {
+    width: 140px;
+  }
+  .join-us-form-header-text {
+    font-size: 14px;
+  }
+  .join-us-form-body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-inline: 10px;
   }
 }
