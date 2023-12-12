@@ -271,6 +271,19 @@ p {
   line-height: 1.3;
 }
 
+.title-big {
+  font-size: clamp(25px, 3.12vw, 60px);
+  line-height: 1.2;
+}
+
+.description-text {
+  color: var(--color-light);
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.65;
+  text-transform: uppercase;
+}
+
 .backdrop-title {
   position: relative;
   z-index: 2;
@@ -297,6 +310,13 @@ p {
   color: transparent;
   -webkit-text-stroke: 1px var(--color-dark-grey);
   text-stroke: 1px var(--color-dark-grey);
+}
+
+.backdrop-title.centered::after {
+  top: -0.45em;
+  left: 50%;
+  translate: -50% 0;
+
 }
 
 // H E A D E R
@@ -504,9 +524,6 @@ p {
   background: url('../icons/arrow-down-left-transparent.svg') 100% 0/var(--trainingTypesItemBgIconSize) no-repeat;
 }
 
-.training-types-images {
-}
-
 .training-types-items-title {
   font-size: 16px;
   line-height: 1.75;
@@ -587,64 +604,47 @@ p {
   background: url('../icons/bold-arrow-top-right.svg') center/contain no-repeat;
 }
 
-.join-us-form {
-}
 .join-us-form-header {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
+// .backdrop-title-join {
+//   position: relative;
+//   z-index: 2 ;
+//   max-width: 350px;
+//   margin: 0 auto;
+//   white-space: nowrap;
+//   display: block;
+//   justify-content: center;
+// }
 
+// .backdrop-title-join::before {
+//   content: '';
+//   // display: block;
+//   position: absolute;
+//   right: calc(100% + 7px);
+//   width: 26px;
+//   height: 40px;
+//   background: url('../icons/Plus_icon.svg') center/contain no-repeat;
+// }
 
-.join-us-form-header-title {
-  // display: block;
-  font-size: clamp(20px, 3.12vw, 60px);
-  line-height: 1.2;
-
-}
-
-.backdrop-title-join {
-  position: relative;
-  z-index: 2 ;
-  max-width: 350px;
-  margin: 0 auto;
-  white-space: nowrap;
-  display: block;
-  justify-content: center;
-}
-
-.backdrop-title-join::before {
-  content: '';
-  // display: block;
-  position: absolute;
-  right: calc(100% + 7px);
-  width: 26px;
-  height: 40px;
-  background: url('../icons/Plus_icon.svg') center/contain no-repeat;
-}
-
-.backdrop-title-join::after {
-  content: attr(data-title);
-  position: absolute;
-  z-index: -1;
-  top: -0.33em;
-  left: 0.06em;
-  font-family: var(--font-family-accent);
-  font-size: 3em;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--color-dark-grey);
-  text-stroke: 1px var(--color-dark-grey);
-}
+// .backdrop-title-join::after {
+//   content: attr(data-title);
+//   position: absolute;
+//   z-index: -1;
+//   top: -0.33em;
+//   left: 0.06em;
+//   font-family: var(--font-family-accent);
+//   font-size: 3em;
+//   line-height: 1;
+//   color: transparent;
+//   -webkit-text-stroke: 1px var(--color-dark-grey);
+//   text-stroke: 1px var(--color-dark-grey);
+// }
 
 .join-us-form-header-text {
-  color: var(--color-light);
-  text-align: center;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 1.65;
-  text-transform: uppercase;
   padding-bottom: 52px;
   padding-top: 30px;
 }
@@ -733,7 +733,35 @@ p {
   margin-bottom: 37px;
 }
 
-// S E C T I O N   P A R T
+// S E C T I O N   F A M I L Y
+
+.family {
+  background-color: var(--color-dark-alternate);
+}
+
+.family-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 132px;
+  padding-bottom: 62px;
+  text-align: center;
+  row-gap: 7px;
+}
+
+.family-description {
+}
+.family-body {
+  display: flex;
+  justify-content: center;
+  column-gap: 26px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+
+.family-image {
+  scroll-snap-align: start;
+}
 
 // S E C T I O N   F O R M
 
@@ -819,6 +847,10 @@ p {
     flex-direction: column-reverse;
   }
 
+  .family-image {
+    height: 360px;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -886,7 +918,6 @@ p {
   }
 
   .join-us-form-header-text {
-    font-size: 12px;
     padding-bottom: 30px;
   }
 
@@ -902,5 +933,30 @@ p {
 
   .location-body {
     padding: 30px 10px;
+  }
+
+  .description-text {
+    font-size: 12px;
+  }
+
+  .family {
+    padding-top: 60px;
+  }
+
+  .family-description {
+    padding: 7px 25px 25px 25px;
+  }
+
+  .family-header {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  .family-image {
+    height: 180px;
+  }
+
+  .family-body {
+    column-gap: 12px;
   }
 }
