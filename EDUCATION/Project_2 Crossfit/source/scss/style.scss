@@ -564,7 +564,6 @@ p {
 }
 
 .join-us-body {
-  height: 600px;
   background-color: var(--color-dark-alternate);
   padding-bottom: 150px;
 }
@@ -591,9 +590,15 @@ p {
 .join-us-form {
 }
 .join-us-form-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
+
+
 .join-us-form-header-title {
+  // display: block;
   font-size: clamp(20px, 3.12vw, 60px);
   line-height: 1.2;
 
@@ -677,9 +682,56 @@ p {
 }
 
 
+.input:focus {
+  outline: none;
+  color: var(--color-dark);
+  background-color: var(--color-light-grey);
+}
 
+.join-us-form-input {
+  max-width: 400px;
+}
 
-// S E C T I O N   L O O K M A P
+// S E C T I O N   M A P
+
+.location {
+  max-width: 1920px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.location-map-image {
+  height: auto;
+}
+
+.location-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 15px;
+}
+
+.location-title::after {
+  position: absolute;
+  z-index: -1;
+  top: -0.43em;
+  left: 0.4em;
+}
+
+.location-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.location-description {
+  max-width: 490px;
+}
+
+.location-description:not(:last-child) {
+  margin-bottom: 37px;
+}
 
 // S E C T I O N   P A R T
 
@@ -758,9 +810,14 @@ p {
     padding-bottom: 80px;
    }
 
-   .join-us-title {
+   .join-us-form-body {
+    padding-inline: 10px;
+  }
 
-   }
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
 }
 
@@ -829,12 +886,21 @@ p {
   }
 
   .join-us-form-header-text {
-    font-size: 14px;
+    font-size: 12px;
+    padding-bottom: 30px;
   }
 
   .join-us-form-body {
     flex-wrap: wrap;
     flex-direction: column;
     padding-inline: 10px;
+  }
+
+  .join-us-body {
+    padding-bottom: 30px;
+  }
+
+  .location-body {
+    padding: 30px 10px;
   }
 }
