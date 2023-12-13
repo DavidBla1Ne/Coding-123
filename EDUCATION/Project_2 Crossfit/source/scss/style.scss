@@ -427,8 +427,8 @@ p {
 
 .banner-pagination-button {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
   border: none;
   padding: 7px;
   background-color: transparent;
@@ -554,7 +554,7 @@ p {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: rgba(129, 129, 129, 0.6);
   border: var(--border);
   border-radius: 50%;
   font-size: 14px;
@@ -681,15 +681,10 @@ p {
   max-width: 400px;
 }
 
-
 .input:focus {
   outline: none;
   color: var(--color-dark);
   background-color: var(--color-light-grey);
-}
-
-.join-us-form-input {
-  max-width: 400px;
 }
 
 // S E C T I O N   M A P
@@ -763,7 +758,62 @@ p {
   scroll-snap-align: start;
 }
 
-// S E C T I O N   F O R M
+// S E C T I O N   B M I
+
+
+.calculate {
+  background-color: var(--color-dark-alternate);
+}
+
+.calculate-bmi {
+  display: flex;
+}
+
+.calculate-bmi-form {
+  max-width: 627px;
+  padding-top: 142px;
+}
+
+.calculate-bmi-form-header {
+  padding-bottom: 31px;
+}
+
+.calculate-form-form-header-title {
+  padding-bottom: 16px;
+}
+
+.calculate-form-form-header-description {
+}
+
+.calculate-form-input-enter {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 18px;
+  column-gap: 32px;
+  padding-bottom: 18px;
+}
+
+.calculate-form-input {
+  max-width: 297px;
+
+}
+
+.calculate-form-drop-down-list {
+  margin-bottom: 26px;
+}
+
+.calculate-form-button {
+}
+
+.calculate-weight-status {
+  height: 610px;
+  width: 610px;
+  background-color: rgb(61, 122, 235);
+  border-radius: 50%;
+  margin-left: 36px;
+  margin-top: 62px;
+  margin-bottom: 52px;
+}
 
 // F O O T E R
 
@@ -959,4 +1009,6 @@ p {
   .family-body {
     column-gap: 12px;
   }
+
+
 }
