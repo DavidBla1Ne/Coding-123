@@ -764,15 +764,17 @@ p {
 
 .calculate {
   background-color: var(--color-dark-alternate);
+  padding-block: 142px;
 }
 
 .calculate-bmi {
   display: flex;
+  column-gap: 36px;
 }
 
 .calculate-bmi-form {
   max-width: 627px;
-  padding-top: 142px;
+  // padding-top: 142px;
 }
 
 .calculate-bmi-form-header {
@@ -811,7 +813,6 @@ p {
   width: 610px;
   background-color: var(--color-dark);
   border-radius: 50%;
-  margin: 62px 0 52px 36px;
   display: flex;
   align-items: center;
   justify-content: center;
