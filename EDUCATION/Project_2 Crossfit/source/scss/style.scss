@@ -764,62 +764,63 @@ p {
 
 .calculate {
   background-color: var(--color-dark-alternate);
-  padding-block: 142px;
+  padding-block: 146px
 }
 
-.calculate-bmi {
+.calculate-inner {
   display: flex;
+  align-items: center;
   column-gap: 36px;
 }
 
-.calculate-bmi-form {
+.calculate-body {
   max-width: 627px;
-  // padding-top: 142px;
+  flex-grow: 1;
 }
 
-.calculate-bmi-form-header {
-  padding-bottom: 31px;
+.calculate-title {
 }
 
-.calculate-form-form-header-title {
-  padding-bottom: 16px;
+.calculate-title:not(:last-child) {
+  margin-bottom: 16px;
 }
 
-.calculate-form-form-header-description {
+.calculate-description {
+  max-width: 385px;
 }
 
-.calculate-form-input-enter {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 18px;
-  column-gap: 32px;
-  padding-bottom: 18px;
+.calculate-description:not(:last-child) {
+  margin-bottom: 30px;
+}
+.calculate-form {
 }
 
-.calculate-form-input {
-  max-width: 297px;
-
+.calculate-form-body {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 18px 30px;
 }
 
-.wide {
-  min-width: 100%;;
+.calculate-form-body:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.calculate-input.wide {
+  grid-column: -1 / 1;
 }
 
 .calculate-form-button {
 }
 
 .calculate-table-wrapper {
-  height: 610px;
-  width: 610px;
-  background-color: var(--color-dark);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .calculate-table {
 }
+
+
+
+
 
 // F O O T E R
 
@@ -907,6 +908,14 @@ p {
   line-height: 2;
   padding: 52px 0 15px;
 }
+
+
+
+
+
+
+
+
 
 // A D A P T I V E
 
