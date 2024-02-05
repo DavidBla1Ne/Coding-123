@@ -1,0 +1,13 @@
+<svg width="19.625000" height="18.000000" viewBox="0 0 19.625 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip1_416">
+			<rect id="63113d978ebd85eb94887924_star-rating-yellow.svg" width="19.625000" height="17.989584" transform="translate(0.000000 0.005371)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip1_416)">
+		<path id="Star" d="M9.8125 13.9771L4.04486 17.7563L5.85693 11.103L0.480255 6.78564L7.36783 6.45312L9.8125 0.00537109L12.2572 6.45312L19.1447 6.78564L13.7681 11.103L15.5801 17.7563L9.8125 13.9771Z" fill="#FFC54F" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

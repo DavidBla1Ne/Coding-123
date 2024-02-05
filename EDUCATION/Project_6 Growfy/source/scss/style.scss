@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+  /**
+    Нормализация блочной модели
+  */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /**
+    Убираем внутренние отступы слева тегам списков,
+    у которых есть атрибут class
+    */
+  :where(ul, ol):where([class]) {
+    padding-left: 0;
+  }
+
+  /**
+    Убираем внешние отступы body и двум другим тегам,
+    у которых есть атрибут class
+    */
+  body,
+  :where(blockquote, figure):where([class]) {
+    margin: 0;
+  }
+
+  /**
+    Убираем внешние отступы вертикали нужным тегам,
+    у которых есть атрибут class
+    */
+  :where(
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl
+  ):where([class]) {
+    margin-block: 0;
+  }
+
+  :where(dd[class]) {
+    margin-left: 0;
+  }
+
+  /**
+    Убираем стандартный маркер маркированному списку,
+    у которого есть атрибут class
+    */
+  :where(ul[class]) {
+    list-style: none;
+  }
+
+  /**
+    Упрощаем работу с изображениями
+    */
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  /**
+    Наследуем свойства шрифт для полей ввода
+    */
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+  }
+
+  html {
+    /**
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+      */
+    height: 100%;
+    /**
+      Плавный скролл
+      */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /**
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+      */
+    min-height: 100%;
+    /**
+      Унифицированный интерлиньяж
+      */
+    line-height: 1.5;
+  }
+
+  /**
+    Удаляем все анимации и переходы для людей,
+    которые предпочитают их не использовать
+    */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+//
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #9C9C9C;
+  background-color: #000000;
+}
+
+[class*="__container"] {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper {
+
+}
+
+// Modules
+
+.button {
+  color: #FFFFFF;
+  background-color: #3D96F4;
+  border-radius: 50px;
+  padding: 16px 30px;
+  font-weight: 500;
+  line-height: 1.43;
+  letter-spacing: 2px;
+}
+
+.button-dark {
+  background-color: #81818B33;
+}
+
+// HEADER
+
+.header {
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  padding-block: 32px;
+}
+.header__logo {
+  flex: 1 0 auto;
+}
+
+.header__menu {
+}
+.menu__list {
+  display: flex;
+  padding-right: 28px;
+}
+.menu__item {
+
+}
+.menu__item:not(:last-child){
+  padding-right: 36px;
+}
+.menu__item:nth-child(3)::after {
+  content: '';
+  // display: block;
+  position: absolute;
+  width: 11px;
+  height: 14px;
+  background: url('../img/Pages-white.svg') 0/100% no-repeat;
+  // padding-right: 8px;
+  margin-left: 7px;
+}
+.cart-header {
+  padding-right: 42px;
+}
+.cart-header__text {
+  padding-right: 15px;
+}
+.cart-header__quantity {
+  background: #941515;
+  height: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  // right: 0;
+}
+.header__button {
+}
+.button {
+}
